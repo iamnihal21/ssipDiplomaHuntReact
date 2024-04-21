@@ -1,0 +1,433 @@
+:root {
+    --primary: #052963;
+    --lightprimary: #003a98;
+    --secondary: #fbac1b;
+    --lightsecondary: #ffc355;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Header start */
+
+header {
+    text-align: center;
+}
+
+header .logo {
+    padding: 30px 0 20px;
+    background-color: var(--secondary);
+}
+
+header .logo h2{
+    display: none;
+}
+
+header nav {
+    background-color: var(--primary);
+    width: fit-content;
+    margin: auto;
+    padding: 12px 24px;
+    border-radius: 0 0 16px 16px;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 8px;
+    list-style: none;
+}
+
+/* header nav ul li a, */
+header nav ul li label {
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    transition: 200ms;
+    cursor: pointer;
+}
+
+/* header nav ul li select {
+    font-size: 16px;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+header nav ul li select option {
+    color: #000;
+} */
+
+header nav ul li label:last-child {
+    display: none;
+}
+
+/* Header end */
+
+/* Common code for section start */
+section > div{
+    width: 80%;
+    padding: 70px;
+    margin: 0 auto;
+}
+
+#hero_checkbox:checked + section {
+    display: block;
+}
+#hero_checkbox:not(:checked) + section {
+    display: none;
+}
+
+#find_checkbox:checked + section {
+    display: block;
+}
+#find_checkbox:not(:checked) + section {
+    display: none;
+}
+
+#settings_checkbox:checked + section {
+    display: block;
+}
+#settings_checkbox:not(:checked) + section {
+    display: none;
+}
+
+#tutorial_checkbox:checked + section {
+    display: block;
+}
+#tutorial_checkbox:not(:checked) + section {
+    display: none;
+}
+
+/* Common code for section end */
+
+/* Hero start */
+#hero > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#hero div div {
+    width: 50%;
+}
+
+#hero div div img {
+    width: 100%;
+}
+
+#hero .hero_left h2 {
+    font-size: 4vw;
+}
+
+#hero button {
+    display: block;
+    margin: 14px auto;
+    font-size: 18px;
+    padding: 4px 20px;
+    background-color: var(--primary);
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    border: 2px solid var(--lightprimary);
+    transition: 200ms;
+}
+
+#hero button:hover {
+    box-shadow: 0px 0px 4px #808080;
+}
+
+#hero button label {
+    cursor: pointer;
+}
+/* Hero end */
+
+/* Find college start */
+#find_college .find_college_title h2 {
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+#find_college .find_college_input {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+#find_college .find_college_input label {
+    display: inline-block;
+    margin: 4px 0;
+}
+
+#find_college .find_college_input :is(input, select)    {
+    width: 150px;
+    padding: 4px 8px;
+    font-size: large;
+}
+
+#find_college .find_college_search button {
+    display: block;
+    margin: 14px auto;
+    font-size: 18px;
+    padding: 4px 20px;
+    background-color: var(--primary);
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#find_college .no-result-warning {
+    margin: auto;
+}
+/* Find college end */
+
+/* Final result start */
+.find_college_success {
+    margin: 30px 0;
+}
+
+.find_college_success h2 {
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.find_college_success > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.find_college_success .result_success {
+    border: 1px solid #808080;
+    border-radius: 8px;
+    padding: 24px;
+    width: 310px;
+    margin-bottom: 24px;
+}
+
+.find_college_success .result_success p:not(:last-child) {
+    margin-bottom: 4px;
+}
+
+.find_college_success .result_success p span {
+    font-weight: 600;
+}
+
+.find_college_success .result_success p a {
+    color: #808080;
+    text-decoration: none;
+}
+
+/* Tutorai start */
+#tutotial_videos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#tutotial_videos div {
+    margin-bottom: 24px;
+    width: 300px;
+}
+
+#tutotial_videos h3 {
+    margin-bottom: 8px;
+}
+
+#tutotial_videos iframe {
+    width: 100%;
+}
+/* Tutorai end */
+
+/* Email start */
+.contactus_form iframe {
+    display: block;
+    margin: auto;
+}
+/* Email end */
+
+/* Footer start */
+footer {
+    background-color: var(--primary);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer a{
+    color: #fff;
+    text-decoration: none;
+    transition: 200ms;
+    outline: none;
+}
+
+footer a:hover{
+    color: var(--lightsecondary);
+}
+/* Footer end */
+
+/* PWA and Mobile Responsive */
+
+@media (max-width: 1024px) {
+    section > div {
+        padding: 70px 0 0 0;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Header start */
+
+    header {
+        text-align: left;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    header .logo img{
+        display: none;
+    }
+
+    header .logo h2{
+        display: block;
+        width: 80%;
+        margin: auto;
+        color: var(--primary);
+        font-size: 32px;
+    }
+
+    header nav {
+        border-radius: 0;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+
+    header nav ul {
+        justify-content: space-around;
+    }
+
+    /* header nav ul li:last-child {
+        position: fixed;
+        top: 30px;
+        right: 30px;
+    } */
+
+    /* header nav ul li select {
+        color: #000;
+    }
+
+    header nav ul li select option {
+        color: #000;
+    } */
+
+    header nav ul li:last-child {
+        right: 8px;
+    }
+
+    header nav ul li label:last-child {
+        display: inline-block;
+        margin-left: 4px;
+    }
+
+    /* Header end */
+
+    /* Common section start */
+    section {
+        margin-top: 86px;
+    }
+
+    #settings_checkbox:checked + section {
+        margin: 0;
+        padding: 0;
+    }
+    #settings_checkbox:checked + section .contactus_form{
+        margin: 86px 0 0 0;
+        padding: 0;
+    }
+    #settings_checkbox:checked + section .contactus_form iframe{
+        margin: 0;
+        padding: 0;
+        width: 125%;
+    }
+    /* Common section end */
+
+    /* Hero start */
+    #hero {
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    #hero div div {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    #hero .hero_left h2 {
+        font-size: 6vw;
+    }
+
+    #hero > div {
+        display: block;
+    }
+
+    /* Hero end */
+
+    /* Tutorial start */
+    #tutotial_videos div {
+        width: 400px;
+    }
+    
+    #tutotial_videos iframe {
+        height: 200px;
+    }
+    /* Tutorial end */
+
+    /* Footer start */
+    footer {
+        display: none;
+    }
+    /* Footer end */
+}
+
+@media (max-width: 425px) {
+    /* Header start */
+    header nav ul li label:first-child {
+        display: none;
+    }
+    /* Header end */
+
+    /* Hero start */
+    #hero .hero_left h2 {
+        font-size: 10vw;
+    }
+    /* Hero end */
+
+    /* Find college start */
+    #find_college .find_college_input {
+        display: block;
+    }
+    #find_college .find_college_input :is(input, select)    {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    /* Find college end */
+
+}
