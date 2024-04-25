@@ -3,7 +3,7 @@
 
 // // Google Sheet config
 // const sheetId = "1yHd9LruwJGYuuHuWX5oHKK8AmTdbscqYQNNEsSiwuko";
-// const apiKey = "AIzaSyDfdTtPMhqb_Fye-HA_aJ_LFJDobBZCpJ4";
+
 
 // // URL to retrieve data from Google Sheet API
 // const dataUrl = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/Final?key=${apiKey}`;
